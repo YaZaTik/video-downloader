@@ -27,16 +27,19 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-# Install Python, pip, yt-dlp, and ffmpeg
+# Install Python3, ffmpeg, curl, ca-certificates, and the standalone yt-dlp binary
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
-    python3-pip \
     ffmpeg \
     curl \
     ca-certificates \
-    && pip3 install --no-cache-dir --break-system-packages --upgrade yt-dlp \
+    && curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp \
+    && chmod a+rx /usr/local/bin/yt-dlp \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Verify yt-dlp binary works
+RUN yt-dlp --version
 
 # Create non-root user for security
 RUN addgroup --system --gid 1001 nodejs && \
