@@ -28,7 +28,7 @@ ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
 # Install Python3, ffmpeg, curl, ca-certificates, and the standalone yt-dlp binary
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update -y && apt-get install -y --no-install-recommends --fix-missing \
     python3 \
     ffmpeg \
     curl \
