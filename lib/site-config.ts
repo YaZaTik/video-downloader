@@ -1,6 +1,6 @@
 /**
  * Global Site Configuration & SEO Constants
- * Configure your domain, site branding, and SEO defaults here.
+ * Configured for saveit.video
  */
 
 const getBaseUrl = (): string => {
@@ -10,23 +10,25 @@ const getBaseUrl = (): string => {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
-  return "http://localhost:3000";
+  return "https://saveit.video";
 };
 
 export const siteConfig = {
-  name: "VideoDownloader",
-  brandName: "Video Downloader",
-  title: "X & Instagram Video Downloader — Fast, Free 1080p MP4 & MP3",
-  shortTitle: "X & Instagram Video Downloader",
+  name: "SaveIt",
+  brandName: "SaveIt.video",
+  title: "SaveIt — X & Instagram Video Downloader (1080p MP4 & MP3)",
+  shortTitle: "SaveIt Video Downloader",
   description:
     "Free online video downloader for X (formerly Twitter) and Instagram. Download public videos, Reels, Stories, and clips in 1080p Full HD, 720p, 480p, or high-bitrate MP3 audio with no watermark or registration.",
   url: getBaseUrl(),
-  author: "Video Downloader Team",
-  creator: "Video Downloader",
-  publisher: "Video Downloader",
-  twitterHandle: "@videodownloader",
+  author: "SaveIt Team",
+  creator: "SaveIt",
+  publisher: "SaveIt.video",
+  twitterHandle: "@saveitvideo",
   themeColor: "#09090b",
   keywords: [
+    "saveit",
+    "saveit video",
     "twitter video downloader",
     "x video downloader",
     "download twitter video 1080p",

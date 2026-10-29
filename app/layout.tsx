@@ -77,9 +77,9 @@ export default function RootLayout({
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3.5">
             <a href="/" className="flex items-center gap-2.5 font-bold tracking-tight text-white hover:opacity-90 transition">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 text-sm font-black shadow-md shadow-blue-600/30">
-                VD
+                S
               </span>
-              <span className="text-sm sm:text-base">Video Downloader</span>
+              <span className="text-sm sm:text-base">SaveIt<span className="text-blue-500">.video</span></span>
             </a>
 
             <nav aria-label="Main Navigation" className="flex items-center gap-3 sm:gap-6 text-xs font-medium text-zinc-400">
@@ -113,10 +113,10 @@ export default function RootLayout({
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 text-xs">
                 <div>
                   <h3 className="font-semibold text-zinc-200 uppercase tracking-wider text-[11px] mb-2.5">
-                    About Video Downloader
+                    About SaveIt
                   </h3>
                   <p className="text-zinc-400 leading-relaxed">
-                    A fast, modern online tool for downloading public videos from X (Twitter) and Instagram.
+                    SaveIt.video is a fast, modern online tool for downloading public videos from X (Twitter) and Instagram.
                     Extracts high-resolution MP4 video and crystal-clear audio with zero registration.
                   </p>
                 </div>
@@ -142,8 +142,12 @@ export default function RootLayout({
                 </div>
               </div>
 
-              <div className="mt-8 border-t border-zinc-900 pt-6 text-center text-[11px] text-zinc-500">
-                <p>&copy; 2026 Video Downloader. All rights reserved.</p>
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-900 pt-6 text-[11px] text-zinc-500">
+                <p>&copy; 2026 SaveIt.video. All rights reserved.</p>
+                <div className="flex items-center gap-4">
+                  <a href="/privacy" className="hover:text-zinc-300 transition">Privacy Policy</a>
+                  <a href="/terms" className="hover:text-zinc-300 transition">Terms of Service</a>
+                </div>
               </div>
             </div>
           </footer>
