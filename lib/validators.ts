@@ -27,6 +27,31 @@ export function isValidVideoUrl(url: string): boolean {
 }
 
 /**
+ * Reconstruct a target video URL from path segments
+ * (e.g., ['x.com', 'user', 'status', '123'] -> 'https://x.com/user/status/123')
+ */
+export function reconstructUrlFromSlug(slug: string[]): string | null {
+  if (!slug || slug.length === 0) return null;
+
+  // Filter out protocol fragments if present (e.g., 'https:', 'http:', '')
+  const cleanParts = slug.filter((part) => part && part !== "https:" && part !== "http:");
+  if (cleanParts.length === 0) return null;
+
+  const raw = cleanParts.join("/");
+  // Verify it targets X/Twitter or Instagram
+  if (
+    raw.includes("x.com") ||
+    raw.includes("twitter.com") ||
+    raw.includes("instagram.com")
+  ) {
+    const formatted = raw.startsWith("http") ? raw : `https://${raw}`;
+    return isValidVideoUrl(formatted) ? formatted : null;
+  }
+
+  return null;
+}
+
+/**
  * Sanitize a URL — strip trailing whitespace and fragment identifiers
  * that may interfere with yt-dlp parsing.
  */

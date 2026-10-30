@@ -8,10 +8,17 @@ import { isValidVideoUrl } from "@/lib/validators";
 interface UrlInputProps {
   onSubmit: (url: string) => void;
   isLoading: boolean;
+  initialValue?: string;
 }
 
-export function UrlInput({ onSubmit, isLoading }: UrlInputProps) {
-  const [url, setUrl] = useState("");
+export function UrlInput({ onSubmit, isLoading, initialValue = "" }: UrlInputProps) {
+  const [url, setUrl] = useState(initialValue);
+
+  React.useEffect(() => {
+    if (initialValue) {
+      setUrl(initialValue);
+    }
+  }, [initialValue]);
   const [activeTab, setActiveTab] = useState<"all" | "twitter" | "instagram">("all");
   const [validationError, setValidationError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);

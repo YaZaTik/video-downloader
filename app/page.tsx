@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Download, Sparkles } from "lucide-react";
 import { UrlInput } from "@/components/url-input";
@@ -10,11 +10,15 @@ import { ErrorDisplay } from "@/components/error-display";
 import { SeoContent } from "@/components/seo-content";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
 
-export default function HomePage() {
+interface HomePageProps {
+  initialUrl?: string;
+}
+
+export default function HomePage({ initialUrl }: HomePageProps) {
   const [appState, setAppState] = useState<AppState>("idle");
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const [error, setError] = useState<ApiErrorResponse | null>(null);
-  const [lastUrl, setLastUrl] = useState<string>("");
+  const [lastUrl, setLastUrl] = useState<string>(initialUrl || "");
 
   const handleSubmit = useCallback(async (url: string) => {
     setLastUrl(url);
@@ -47,6 +51,20 @@ export default function HomePage() {
       setAppState("error");
     }
   }, []);
+
+  // Auto-fetch if initialUrl prop or ?url= query parameter is passed
+  useEffect(() => {
+    let target = initialUrl;
+    if (!target && typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const queryUrl = params.get("url");
+      if (queryUrl) target = queryUrl;
+    }
+    if (target) {
+      setLastUrl(target);
+      handleSubmit(target);
+    }
+  }, [initialUrl, handleSubmit]);
 
   const handleRetry = useCallback(() => {
     if (lastUrl) {
@@ -98,7 +116,23 @@ export default function HomePage() {
       {/* Input Section */}
       <section aria-label="Video URL Input" className="px-4">
         <div className="mx-auto max-w-2xl">
-          <UrlInput onSubmit={handleSubmit} isLoading={appState === "loading"} />
+          <UrlInput
+            onSubmit={handleSubmit}
+            isLoading={appState === "loading"}
+            initialValue={lastUrl || initialUrl || ""}
+          />
+        </div>
+      </section>
+
+      {/* Quick Prefix Shortcut Tip */}
+      <section className="px-4 pt-3">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-[11px] text-zinc-500">
+            <span className="font-semibold text-zinc-400">⚡ Pro Shortcut:</span> Put{" "}
+            <code className="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-blue-400">saveit.video/</code>{" "}
+            before any link to download instantly! (e.g.{" "}
+            <span className="text-zinc-400">saveit.video/x.com/...</span>)
+          </p>
         </div>
       </section>
 
