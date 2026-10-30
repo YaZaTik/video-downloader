@@ -52,6 +52,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-adsense-account": siteConfig.adSenseClientId || "ca-pub-7298235222437919",
+  },
 };
 
 export default function RootLayout({
@@ -61,18 +64,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adSenseClientId}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className="min-h-screen antialiased selection:bg-blue-500/30 selection:text-white bg-[#09090b] text-[#fafafa]"
         suppressHydrationWarning
       >
-        {siteConfig.adSenseClientId && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adSenseClientId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
         {siteConfig.googleAnalyticsId && (
           <>
             <Script

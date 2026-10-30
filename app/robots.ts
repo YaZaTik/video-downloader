@@ -15,6 +15,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
       {
+        userAgent: "Mediapartners-Google",
+        allow: "/",
+      },
+      {
         userAgent: ["Twitterbot", "facebookexternalhit", "LinkedInBot", "WhatsApp"],
         allow: "/",
         disallow: [],
