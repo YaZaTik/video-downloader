@@ -25,6 +25,7 @@ export const siteConfig = {
   creator: "SaveIt",
   publisher: "SaveIt.video",
   twitterHandle: "@saveitvideo",
+  googleAnalyticsId: "G-SSM44R0LQP",
   themeColor: "#09090b",
   keywords: [
     "saveit",
