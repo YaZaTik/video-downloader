@@ -26,6 +26,8 @@ export const siteConfig = {
   publisher: "SaveIt.video",
   twitterHandle: "@saveitvideo",
   googleAnalyticsId: "G-SSM44R0LQP",
+  adSenseClientId: "ca-pub-7298235222437919",
+  adSensePublisherId: "pub-7298235222437919",
   themeColor: "#09090b",
   keywords: [
     "saveit",

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { siteConfig } from "@/lib/site-config";
 
 interface AdBannerProps {
   slot?: string;
@@ -22,7 +23,8 @@ export function AdBanner({
   className = "",
 }: AdBannerProps) {
   const adRef = useRef<HTMLDivElement>(null);
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  const adsenseClientId =
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || siteConfig.adSenseClientId;
 
   useEffect(() => {
     // Only attempt to push adsbygoogle if a real AdSense client ID and slot exist

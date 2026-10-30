@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
+import { siteConfig } from "@/lib/site-config";
 
 export async function GET() {
-  const pubId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "pub-0000000000000000";
+  const pubId =
+    process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ||
+    siteConfig.adSensePublisherId ||
+    "pub-7298235222437919";
   // Remove "ca-" prefix if present for standard ads.txt format
   const formattedPubId = pubId.replace(/^ca-/, "");
 

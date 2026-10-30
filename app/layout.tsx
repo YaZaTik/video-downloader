@@ -65,6 +65,14 @@ export default function RootLayout({
         className="min-h-screen antialiased selection:bg-blue-500/30 selection:text-white bg-[#09090b] text-[#fafafa]"
         suppressHydrationWarning
       >
+        {siteConfig.adSenseClientId && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adSenseClientId}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
         {siteConfig.googleAnalyticsId && (
           <>
             <Script
