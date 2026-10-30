@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/json-ld";
 import { siteConfig } from "@/lib/site-config";
 import { LanguageProvider } from "@/components/language-context";
 import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColor,
@@ -116,50 +117,7 @@ export default function RootLayout({
               {children}
             </main>
 
-            {/* Semantic SEO-Rich Footer */}
-            <footer className="mt-auto border-t border-zinc-800/60 bg-zinc-950/60 py-10">
-              <div className="mx-auto max-w-5xl px-4">
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 text-xs">
-                  <div>
-                    <h3 className="font-semibold text-zinc-200 uppercase tracking-wider text-[11px] mb-2.5">
-                      About SaveIt
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed">
-                      SaveIt.video is a fast, modern online tool for downloading public videos from X (Twitter) and Instagram.
-                      Extracts high-resolution MP4 video and crystal-clear audio with zero registration.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-zinc-200 uppercase tracking-wider text-[11px] mb-2.5">
-                      Supported Platforms
-                    </h3>
-                    <ul className="space-y-1.5 text-zinc-400">
-                      <li>• <a href="#twitter-downloader" className="hover:text-white">X (Twitter) Post &amp; Video Downloader</a></li>
-                      <li>• <a href="#instagram-downloader" className="hover:text-white">Instagram Reels &amp; Story Saver</a></li>
-                      <li>• Instagram Video Posts (MP4 / Full HD)</li>
-                      <li>• MP3 &amp; M4A Audio Extraction</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-zinc-200 uppercase tracking-wider text-[11px] mb-2.5">
-                      Legal &amp; Privacy
-                    </h3>
-                    <p className="text-zinc-500 leading-relaxed">
-                      This service is for personal and educational use only. We do not host copyrighted files on our servers.
-                      All media files are directly downloaded from public CDN endpoints.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-zinc-900 pt-6 text-[11px] text-zinc-500">
-                  <p>&copy; 2026 SaveIt.video. All rights reserved.</p>
-                  <div className="flex items-center gap-4">
-                    <a href="/privacy" className="hover:text-zinc-300 transition">Privacy Policy</a>
-                    <a href="/terms" className="hover:text-zinc-300 transition">Terms of Service</a>
-                  </div>
-                </div>
-              </div>
-            </footer>
+            <Footer />
           </div>
         </LanguageProvider>
       </body>
