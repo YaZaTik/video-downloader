@@ -1,25 +1,25 @@
 "use client";
 
 import React from "react";
-import { Globe } from "lucide-react";
+import Link from "next/link";
 import { useLanguage } from "./language-context";
 import { Language } from "@/lib/translations";
 
 export function LanguageSwitcher({ className = "" }: { className?: string }) {
   const { lang, setLang } = useLanguage();
 
-  const languages: { code: Language; label: string; flag: string }[] = [
-    { code: "en", label: "EN", flag: "🇺🇸" },
-    { code: "fr", label: "FR", flag: "🇫🇷" },
-    { code: "ar", label: "AR", flag: "🇲🇦" },
+  const languages: { code: Language; label: string; flag: string; href: string }[] = [
+    { code: "en", label: "EN", flag: "🇺🇸", href: "/" },
+    { code: "fr", label: "FR", flag: "🇫🇷", href: "/fr" },
+    { code: "ar", label: "AR", flag: "🇲🇦", href: "/ar" },
   ];
 
   return (
     <div className={`flex items-center gap-1 rounded-full border border-zinc-800 bg-zinc-900/80 p-0.5 ${className}`}>
       {languages.map((item) => (
-        <button
+        <Link
           key={item.code}
-          type="button"
+          href={item.href}
           onClick={() => setLang(item.code)}
           className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold transition ${
             lang === item.code
@@ -30,7 +30,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
         >
           <span>{item.flag}</span>
           <span>{item.label}</span>
-        </button>
+        </Link>
       ))}
     </div>
   );

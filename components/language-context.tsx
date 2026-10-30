@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Language, translations, Translations } from "@/lib/translations";
 
 interface LanguageContextType {
@@ -16,34 +17,37 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>("en");
+  const pathname = usePathname() || "/";
+  const router = useRouter();
+
+  const getLangFromPath = (path: string): Language => {
+    if (path.startsWith("/ar")) return "ar";
+    if (path.startsWith("/fr")) return "fr";
+    return "en";
+  };
+
+  const [lang, setLangState] = useState<Language>(getLangFromPath(pathname));
 
   useEffect(() => {
-    // Check saved preference or browser language
-    const saved = localStorage.getItem("saveit_lang") as Language;
-    if (saved && (saved === "en" || saved === "fr" || saved === "ar")) {
-      setLangState(saved);
-      document.documentElement.dir = translations[saved].dir;
-      document.documentElement.lang = saved;
-    } else {
-      const browserLang = navigator.language.slice(0, 2);
-      if (browserLang === "fr") {
-        setLangState("fr");
-        document.documentElement.dir = "ltr";
-        document.documentElement.lang = "fr";
-      } else if (browserLang === "ar") {
-        setLangState("ar");
-        document.documentElement.dir = "rtl";
-        document.documentElement.lang = "ar";
-      }
-    }
-  }, []);
+    const currentLang = getLangFromPath(pathname);
+    setLangState(currentLang);
+    document.documentElement.dir = translations[currentLang].dir;
+    document.documentElement.lang = currentLang;
+  }, [pathname]);
 
   const setLang = (newLang: Language) => {
     setLangState(newLang);
-    localStorage.setItem("saveit_lang", newLang);
     document.documentElement.dir = translations[newLang].dir;
     document.documentElement.lang = newLang;
+
+    // Navigate to the localized route
+    if (newLang === "ar") {
+      router.push("/ar");
+    } else if (newLang === "fr") {
+      router.push("/fr");
+    } else {
+      router.push("/");
+    }
   };
 
   return (

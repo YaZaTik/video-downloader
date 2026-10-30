@@ -9,14 +9,16 @@ import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { SeoContent } from "@/components/seo-content";
 import { useLanguage } from "@/components/language-context";
+import type { Language } from "@/lib/translations";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
 
 interface HomePageProps {
   initialUrl?: string;
+  defaultLang?: Language;
 }
 
-export default function HomePage({ initialUrl }: HomePageProps) {
-  const { t } = useLanguage();
+export default function HomePage({ initialUrl, defaultLang }: HomePageProps) {
+  const { t, setLang } = useLanguage();
   const [appState, setAppState] = useState<AppState>("idle");
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const [error, setError] = useState<ApiErrorResponse | null>(null);
@@ -53,6 +55,13 @@ export default function HomePage({ initialUrl }: HomePageProps) {
       setAppState("error");
     }
   }, []);
+
+  // Set default language if passed from route (/fr, /ar)
+  useEffect(() => {
+    if (defaultLang) {
+      setLang(defaultLang);
+    }
+  }, [defaultLang, setLang]);
 
   // Auto-fetch if initialUrl prop or ?url= query parameter is passed
   useEffect(() => {
