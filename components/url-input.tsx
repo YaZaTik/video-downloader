@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link2, Clipboard, ArrowRight, Loader2, X as XIcon } from "lucide-react";
 import { isValidVideoUrl } from "@/lib/validators";
+import { useLanguage } from "./language-context";
 
 interface UrlInputProps {
   onSubmit: (url: string) => void;
@@ -12,6 +13,7 @@ interface UrlInputProps {
 }
 
 export function UrlInput({ onSubmit, isLoading, initialValue = "" }: UrlInputProps) {
+  const { t } = useLanguage();
   const [url, setUrl] = useState(initialValue);
 
   React.useEffect(() => {
@@ -26,11 +28,11 @@ export function UrlInput({ onSubmit, isLoading, initialValue = "" }: UrlInputPro
   const getPlaceholder = () => {
     switch (activeTab) {
       case "twitter":
-        return "Paste an X/Twitter post link (e.g., https://x.com/user/status/...)";
+        return "x.com/...";
       case "instagram":
-        return "Paste an Instagram Reel or post link (e.g., https://instagram.com/reel/...)";
+        return "instagram.com/reel/...";
       default:
-        return "Paste any X (Twitter) or Instagram video link...";
+        return t.inputPlaceholder;
     }
   };
 
@@ -174,10 +176,10 @@ export function UrlInput({ onSubmit, isLoading, initialValue = "" }: UrlInputPro
             onClick={handlePaste}
             disabled={isLoading}
             className="flex items-center gap-1.5 rounded-xl border border-zinc-700 px-3 py-2 text-xs font-medium text-zinc-300 transition hover:bg-zinc-800 hover:text-white disabled:opacity-40"
-            title="Paste from Clipboard"
+            title={t.pasteBtn}
           >
             <Clipboard size={14} />
-            <span className="hidden sm:inline">Paste</span>
+            <span className="hidden sm:inline">{t.pasteBtn}</span>
           </button>
 
           <button
@@ -188,11 +190,11 @@ export function UrlInput({ onSubmit, isLoading, initialValue = "" }: UrlInputPro
             {isLoading ? (
               <>
                 <Loader2 size={16} className="animate-spin" />
-                <span className="hidden sm:inline">Fetching...</span>
+                <span className="hidden sm:inline">{t.analyzingBtn}</span>
               </>
             ) : (
               <>
-                <span className="hidden sm:inline">Download</span>
+                <span className="hidden sm:inline">{t.downloadBtn}</span>
                 <ArrowRight size={16} />
               </>
             )}

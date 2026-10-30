@@ -8,6 +8,7 @@ import { VideoResult } from "@/components/video-result";
 import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { SeoContent } from "@/components/seo-content";
+import { useLanguage } from "@/components/language-context";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
 
 interface HomePageProps {
@@ -15,6 +16,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ initialUrl }: HomePageProps) {
+  const { t } = useLanguage();
   const [appState, setAppState] = useState<AppState>("idle");
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const [error, setError] = useState<ApiErrorResponse | null>(null);
@@ -88,7 +90,7 @@ export default function HomePage({ initialUrl }: HomePageProps) {
             className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3.5 py-1 text-xs font-semibold text-blue-400"
           >
             <Sparkles size={13} />
-            <span>X (Twitter) &amp; Instagram Video Downloader</span>
+            <span>{t.badge}</span>
           </motion.div>
 
           {/* Title (H1 for Main SEO Target) */}
@@ -98,7 +100,9 @@ export default function HomePage({ initialUrl }: HomePageProps) {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl"
           >
-            <span className="gradient-text">Download X &amp; Instagram Videos</span>
+            <span className="gradient-text">
+              {t.title} {t.titleHighlight}
+            </span>
           </motion.h1>
 
           <motion.p
@@ -107,8 +111,7 @@ export default function HomePage({ initialUrl }: HomePageProps) {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="mt-3.5 text-sm leading-relaxed text-zinc-400 sm:text-base max-w-2xl mx-auto"
           >
-            Save public videos and Reels in crisp <strong>1080p Full HD</strong>, <strong>720p</strong>, or extract high-quality <strong>MP3 audio</strong>.
-            Fast, free, and directly saved to your device.
+            {t.subtitle}
           </motion.p>
         </div>
       </section>
@@ -128,10 +131,11 @@ export default function HomePage({ initialUrl }: HomePageProps) {
       <section className="px-4 pt-3">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-[11px] text-zinc-500">
-            <span className="font-semibold text-zinc-400">⚡ Pro Shortcut:</span> Put{" "}
-            <code className="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-blue-400">saveit.video/</code>{" "}
-            before any link to download instantly! (e.g.{" "}
-            <span className="text-zinc-400">saveit.video/x.com/...</span>)
+            <span className="font-semibold text-zinc-400">{t.shortcutTip}</span> Put{" "}
+            <code className="rounded bg-zinc-800 px-1.5 py-0.5 font-mono text-blue-400">
+              {t.shortcutCode}
+            </code>{" "}
+            {t.shortcutExample}
           </p>
         </div>
       </section>
