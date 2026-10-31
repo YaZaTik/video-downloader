@@ -263,6 +263,10 @@ export const instagramTranslations: Record<Language, InstagramPageTranslations> 
         q: "هل يحتفظ موقع SaveIt بنسخ من مقاطع الفيديو المحملة أو بياناتي الشخصية؟",
         a: "لا، احتراماً للخصوصية والأمان، نحن لا نخزن أي مقاطع فيديو على خوادمنا ولا نسجل أي معلومات شخصية. جميع الملفات يتم جلبها مباشرة من خوادم إنستغرام العامة.",
       },
+      {
+        q: "هل موقع Saveit.video بديل لمواقع Snapinsta أو SaveInsta أو iGram؟",
+        a: "نعم بكل تأكيد! يعتبر Saveit.video البديل الأسرع والأكثر أماناً لمواقع Snapinsta و SaveInsta و iGram، حيث يتيح لك تحميل فيديوهات وريلز وقصص إنستغرام (Instagram reels downloader / video download) بجودة 1080p Full HD بدون إعلانات منبثقة أو روابط مضللة وبدون برامج.",
+      },
     ],
   },
 
@@ -430,6 +434,10 @@ export const instagramTranslations: Record<Language, InstagramPageTranslations> 
         q: "Saveit.video conserve-t-il une copie de mes téléchargements ?",
         a: "Non. Par respect strict de votre vie privée, aucun fichier vidéo n'est stocké sur nos serveurs. Le flux multimédia est transmis directement de manière éphémère.",
       },
+      {
+        q: "Saveit.video est-il une bonne alternative à Snapinsta, SaveInsta ou iGram ?",
+        a: "Absolument. Saveit.video constitue la meilleure alternative moderne à Snapinsta, SaveInsta et iGram pour télécharger vidéo Instagram, Reels et Stories en 1080p MP4 sans redirection trompeuse, sans inscription et sans publicité intrusive.",
+      },
     ],
   },
 
@@ -596,6 +604,10 @@ export const instagramTranslations: Record<Language, InstagramPageTranslations> 
       {
         q: "Does SaveIt store my downloaded videos or track my browsing?",
         a: "No. We respect user privacy. We do not store downloaded videos on our servers and we never track or log personal activity.",
+      },
+      {
+        q: "Is Saveit.video an alternative to Snapinsta, SaveInsta, and iGram?",
+        a: "Yes! SaveIt is a fast, clean, and secure alternative to Snapinsta, SaveInsta, and iGram. You can download Instagram videos, Reels, Stories, and photos in original 1080p Full HD MP4 without spam popups or watermark branding.",
       },
     ],
   },

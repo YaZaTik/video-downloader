@@ -6,6 +6,22 @@ export const metadata: Metadata = {
   title: "Téléchargeur Vidéo X & Instagram (1080p MP4 & MP3)",
   description:
     "Téléchargez gratuitement vos vidéos et Reels de X (Twitter) et Instagram en 1080p Full HD, 720p ou MP3 haute qualité. Sans filigrane, direct et rapide.",
+  keywords: [
+    "télécharger vidéo twitter",
+    "télécharger video twitter",
+    "télécharger vidéo instagram",
+    "télécharger video instagram",
+    "télécharger reel instagram",
+    "télécharger story instagram",
+    "télécharger video x",
+    "telecharger video instagram en ligne",
+    "télécharger photo instagram",
+    "convertisseur twitter mp4",
+    "telecharger video gratuit sans filigrane",
+    "saveit video",
+    "snapinsta fr",
+    "ssstwitter fr",
+  ],
   alternates: {
     canonical: "/fr",
     languages: {

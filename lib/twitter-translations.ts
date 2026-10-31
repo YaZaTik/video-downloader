@@ -263,6 +263,10 @@ export const twitterTranslations: Record<Language, TwitterPageTranslations> = {
         q: "هل يحفظ موقع SaveIt أي بيانات حول حسابي أو المقاطع المحملة؟",
         a: "أبداً. نحن نضمن الخصوصية الكاملة. لا نقوم بتخزين أي مقاطع فيديو على خوادمنا ولا نطلب إذن الوصول لحسابك الشخصي في تويتر.",
       },
+      {
+        q: "هل يعتبر Saveit.video بديلاً لمواقع SSSTwitter أو Twdown أو Twitsave؟",
+        a: "نعم! يوفر Saveit.video البديل الأسرع والأكثر استقراراً لـ SSSTwitter و TWDown لتحميل مقاطع وفيديوهات تويتر بدقة 1080p Full HD واستخراج الصوت MP3 مباشرة بدون إعلانات مزعجة وبدون قيود.",
+      },
     ],
   },
 
@@ -430,6 +434,10 @@ export const twitterTranslations: Record<Language, TwitterPageTranslations> = {
         q: "Saveit.video conserve-t-il des données ou des copies de mes vidéos ?",
         a: "Non. Vos téléchargements sont strictement privés et aucun fichier média n'est stocké sur nos serveurs.",
       },
+      {
+        q: "Saveit.video est-il une alternative à SSSTwitter, TWDown ou Twitsave ?",
+        a: "Oui ! Saveit.video est l'alternative moderne et sans pub à SSSTwitter et Twdown pour télécharger des vidéos Twitter (X), des GIFs et extraire des fichiers MP3 en 1080p gratuitement.",
+      },
     ],
   },
 
@@ -596,6 +604,10 @@ export const twitterTranslations: Record<Language, TwitterPageTranslations> = {
       {
         q: "Does SaveIt store my downloaded videos or track my Twitter activity?",
         a: "Never. We do not store media on our servers and we never track or log your download activity.",
+      },
+      {
+        q: "Is Saveit.video an alternative to SSSTwitter, TWDown, or Twitsave?",
+        a: "Yes! Saveit.video is a clean, popup-free alternative to SSSTwitter, TWDown, and Twitsave to download X (Twitter) videos, GIFs, and MP3 audio in Full HD 1080p with zero restrictions.",
       },
     ],
   },
