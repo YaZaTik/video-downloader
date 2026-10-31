@@ -27,6 +27,7 @@ import { VideoResult } from "@/components/video-result";
 import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { PwaInstallButton } from "@/components/pwa-install";
+import { VideoDemoCard } from "@/components/video-demo-card";
 import { useLanguage } from "@/components/language-context";
 import { instagramTranslations } from "@/lib/instagram-translations";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
@@ -389,6 +390,9 @@ export function InstagramPageClient() {
               </p>
             </div>
           </div>
+
+          {/* Interactive Video Demonstration */}
+          <VideoDemoCard lang={lang} className="mt-8" />
         </section>
 
         {/* Editorial Section 4: Address Bar Shortcut */}

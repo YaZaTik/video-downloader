@@ -32,6 +32,9 @@ export function Footer() {
               <li>
                 • <Link href="/instagram" className="text-pink-400 hover:text-pink-300 font-medium transition">{s.instagramPillarTitle} (1080p / Reels)</Link>
               </li>
+              <li>
+                • <Link href="/tutorial" className="text-purple-400 hover:text-purple-300 font-medium transition">🎬 Tutoriel Vidéo &amp; Guide</Link>
+              </li>
               <li>• MP4 / 1080p Full HD</li>
               <li>• MP3 &amp; M4A Audio Extraction</li>
             </ul>
