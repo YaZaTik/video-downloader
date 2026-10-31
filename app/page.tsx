@@ -9,6 +9,7 @@ import { VideoResult } from "@/components/video-result";
 import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { SeoContent } from "@/components/seo-content";
+import { AdBanner } from "@/components/ad-banner";
 import { useLanguage } from "@/components/language-context";
 import type { Language } from "@/lib/translations";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
@@ -206,7 +207,7 @@ export default function HomePage({ initialUrl, defaultLang }: HomePageProps) {
       </section>
 
       {/* Dynamic Result Area */}
-      <section aria-label="Download Results" className="px-4 pb-8">
+      <section aria-label="Download Results" className="px-4 pb-4">
         <AnimatePresence mode="wait">
           {appState === "loading" && <SkeletonLoader key="skeleton" />}
 
@@ -218,6 +219,11 @@ export default function HomePage({ initialUrl, defaultLang }: HomePageProps) {
             <ErrorDisplay key="error" error={error} onRetry={handleRetry} />
           )}
         </AnimatePresence>
+      </section>
+
+      {/* Primary Ad Placement */}
+      <section aria-label="Advertisement" className="px-4">
+        <AdBanner slot="3732966991" className="my-6 max-w-3xl" />
       </section>
 
       {/* SEO-Rich Content (How-To Guide, Feature Matrix, FAQ Accordion) */}

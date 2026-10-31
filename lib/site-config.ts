@@ -28,6 +28,7 @@ export const siteConfig = {
   googleAnalyticsId: "G-SSM44R0LQP",
   adSenseClientId: "ca-pub-7298235222437919",
   adSensePublisherId: "pub-7298235222437919",
+  adSenseSlotId: "3732966991",
   themeColor: "#09090b",
   keywords: [
     "saveit",

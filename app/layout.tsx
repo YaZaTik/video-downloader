@@ -74,6 +74,12 @@ export default function RootLayout({
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.adSenseClientId}`}
           crossOrigin="anonymous"
         />
+        <script
+          async
+          // @ts-ignore
+          custom-element="amp-ad"
+          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+        />
       </head>
       <body
         className="min-h-screen antialiased selection:bg-blue-500/30 selection:text-white bg-[#09090b] text-[#fafafa]"

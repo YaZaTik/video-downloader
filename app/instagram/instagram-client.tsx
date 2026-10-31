@@ -28,6 +28,7 @@ import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { PwaInstallButton } from "@/components/pwa-install";
 import { VideoDemoCard } from "@/components/video-demo-card";
+import { AdBanner } from "@/components/ad-banner";
 import { useLanguage } from "@/components/language-context";
 import { instagramTranslations } from "@/lib/instagram-translations";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
@@ -139,7 +140,7 @@ export function InstagramPageClient() {
       </section>
 
       {/* ─── Results Area ───────────────────────────────────────────── */}
-      <section aria-label="Résultats" className="px-4 pb-8">
+      <section aria-label="Résultats" className="px-4 pb-4">
         <AnimatePresence mode="wait">
           {appState === "loading" && <SkeletonLoader key="skeleton" />}
           {appState === "success" && videoInfo && <VideoResult key="result" video={videoInfo} />}
@@ -147,6 +148,11 @@ export function InstagramPageClient() {
             <ErrorDisplay key="error" error={error} onRetry={() => lastUrl && handleSubmit(lastUrl)} />
           )}
         </AnimatePresence>
+      </section>
+
+      {/* Primary Ad Placement */}
+      <section aria-label="Advertisement" className="px-4">
+        <AdBanner slot="3732966991" className="my-6 max-w-3xl" />
       </section>
 
       {/* ─── Rich Editorial Content (Adapted from Spec) ─────────────── */}

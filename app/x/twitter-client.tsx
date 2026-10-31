@@ -24,6 +24,7 @@ import { VideoResult } from "@/components/video-result";
 import { SkeletonLoader } from "@/components/skeleton-loader";
 import { ErrorDisplay } from "@/components/error-display";
 import { PwaInstallButton } from "@/components/pwa-install";
+import { AdBanner } from "@/components/ad-banner";
 import { useLanguage } from "@/components/language-context";
 import { twitterTranslations } from "@/lib/twitter-translations";
 import type { AppState, VideoInfo, ApiErrorResponse, ApiResponse } from "@/types";
@@ -137,7 +138,7 @@ export function TwitterPageClient() {
       </section>
 
       {/* ─── Results Area ───────────────────────────────────────────── */}
-      <section aria-label="Résultats" className="px-4 pb-8">
+      <section aria-label="Résultats" className="px-4 pb-4">
         <AnimatePresence mode="wait">
           {appState === "loading" && <SkeletonLoader key="skeleton" />}
           {appState === "success" && videoInfo && <VideoResult key="result" video={videoInfo} />}
@@ -145,6 +146,11 @@ export function TwitterPageClient() {
             <ErrorDisplay key="error" error={error} onRetry={() => lastUrl && handleSubmit(lastUrl)} />
           )}
         </AnimatePresence>
+      </section>
+
+      {/* Primary Ad Placement */}
+      <section aria-label="Advertisement" className="px-4">
+        <AdBanner slot="3732966991" className="my-6 max-w-3xl" />
       </section>
 
       {/* ─── Rich Editorial Content for X (Twitter) ─────────────────── */}
