@@ -30,7 +30,7 @@ export function Footer() {
                 • <a href="#twitter-downloader" className="hover:text-white">{s.twitterPillarTitle}</a>
               </li>
               <li>
-                • <a href="#instagram-downloader" className="hover:text-white">{s.instagramPillarTitle}</a>
+                • <Link href="/instagram" className="text-pink-400 hover:text-pink-300 font-medium transition">{s.instagramPillarTitle} (1080p / Reels)</Link>
               </li>
               <li>• MP4 / 1080p Full HD</li>
               <li>• MP3 &amp; M4A Audio Extraction</li>

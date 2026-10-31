@@ -6,6 +6,19 @@ export const metadata: Metadata = {
   title: "Téléchargeur Instagram gratuit — Reels, Vidéos & Stories (1080p) | SaveIt",
   description:
     "Téléchargez gratuitement vos Reels, vidéos et Stories Instagram en haute définition 1080p Full HD et MP3 sans filigrane avec Saveit.video. Compatible PC, Android et iPhone.",
+  keywords: [
+    "instagram video downloader",
+    "instagram reels downloader",
+    "telecharger video instagram",
+    "telecharger reel instagram",
+    "تحميل ريلز انستقرام",
+    "تحميل فيديو من الانستقرام",
+    "save instagram video",
+    "instagram story downloader",
+    "instagram mp3 audio",
+    "instagram to mp4 1080p",
+    "instagram downloader no watermark",
+  ],
   alternates: {
     canonical: "/instagram",
   },
