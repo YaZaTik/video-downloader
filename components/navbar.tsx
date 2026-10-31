@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { LanguageSwitcher } from "./language-switcher";
 import { PwaInstallButton } from "./pwa-install";
 import { useLanguage } from "./language-context";
@@ -33,6 +34,9 @@ export function Navbar() {
             <a href="#how-it-works" className="hover:text-white transition">
               {t.howItWorks}
             </a>
+            <Link href="/instagram" className="hover:text-pink-400 transition hidden sm:inline">
+              Instagram
+            </Link>
             <a href="#faq" className="hover:text-white transition">
               {t.faq}
             </a>
