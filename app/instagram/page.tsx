@@ -21,5 +21,93 @@ export const metadata: Metadata = {
 };
 
 export default function InstagramPage() {
-  return <InstagramPageClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        name: "SaveIt Instagram Video Downloader",
+        url: "https://saveit.video/instagram",
+        applicationCategory: "MultimediaApplication",
+        operatingSystem: "Windows, macOS, Linux, Android, iOS",
+        browserRequirements: "Requires HTML5 support",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          ratingCount: "1840",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "HowTo",
+        name: "Comment télécharger une vidéo ou Reel Instagram",
+        description: "Guide étape par étape pour télécharger des vidéos et Reels Instagram en haute définition 1080p sans filigrane.",
+        step: [
+          {
+            "@type": "HowToStep",
+            position: 1,
+            name: "Copiez le lien",
+            text: "Ouvrez Instagram, repérez la publication ou le Reel, cliquez sur l'icône de partage et sélectionnez 'Copier le lien'.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 2,
+            name: "Collez l'URL",
+            text: "Collez le lien dans la barre de saisie sur saveit.video/instagram et cliquez sur Télécharger.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 3,
+            name: "Téléchargez en HD",
+            text: "Choisissez la résolution souhaitée (1080p MP4 ou Audio MP3) et enregistrez le fichier sur votre appareil.",
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Saveit.video est-il gratuit pour télécharger sur Instagram ?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Oui, le service est 100% gratuit, sans inscription, sans limite quotidienne et sans carte bancaire.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Les vidéos Instagram sont-elles téléchargées sans filigrane ?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Absolument. Nous extrayons directement le flux vidéo d'origine en qualité 1080p sans aucun filigrane ni logo ajouté.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Comment fonctionne le raccourci dans la barre d'adresse ?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Ajoutez simplement 'saveit.video/' devant l'URL Instagram dans votre navigateur (exemple: saveit.video/instagram.com/p/Bsyq4yVH8Mh/) pour lancer le téléchargement direct.",
+            },
+          },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <InstagramPageClient />
+    </>
+  );
 }
