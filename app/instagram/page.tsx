@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/instagram",
+    languages: {
+      en: "https://saveit.video/instagram",
+      fr: "https://saveit.video/instagram",
+      ar: "https://saveit.video/instagram",
+    },
   },
   openGraph: {
     title: "Téléchargeur Instagram gratuit — Reels & Vidéos (1080p) — SaveIt",

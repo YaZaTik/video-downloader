@@ -147,6 +147,15 @@ export function SeoContent() {
               <p>{s.twitterPillarF2Desc}</p>
             </div>
           </div>
+          <div className="pt-2 flex justify-start">
+            <Link
+              href="/x"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2.5 text-xs font-bold text-white shadow-md shadow-blue-600/20 hover:scale-[1.02] hover:shadow-blue-600/40 transition"
+            >
+              <span>{lang === "ar" ? "افتح صفحة تحميل تويتر (X) المخصصة مع الدليل الكامل" : lang === "fr" ? "Accéder à la page dédiée X (Twitter) & Guide complet" : "Open Dedicated X (Twitter) Downloader & Full Guide"}</span>
+              <span className="text-sm">→</span>
+            </Link>
+          </div>
         </section>
       )}
 

@@ -27,7 +27,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-1.5 text-zinc-400">
               <li>
-                • <a href="#twitter-downloader" className="hover:text-white">{s.twitterPillarTitle}</a>
+                • <Link href="/x" className="text-blue-400 hover:text-blue-300 font-medium transition">{s.twitterPillarTitle} (1080p / Tweets)</Link>
               </li>
               <li>
                 • <Link href="/instagram" className="text-pink-400 hover:text-pink-300 font-medium transition">{s.instagramPillarTitle} (1080p / Reels)</Link>
