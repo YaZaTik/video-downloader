@@ -29,6 +29,7 @@ export const siteConfig = {
   adSenseClientId: "ca-pub-7298235222437919",
   adSensePublisherId: "pub-7298235222437919",
   adSenseSlotId: "3732966991",
+  pinterestVerificationId: "aae03369cfc300d8387c0a8c797ef786",
   themeColor: "#09090b",
   keywords: [
     "saveit",

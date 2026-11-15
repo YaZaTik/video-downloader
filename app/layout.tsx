@@ -58,6 +58,7 @@ export const metadata: Metadata = {
   other: {
     "google-adsense-account": siteConfig.adSenseClientId || "ca-pub-7298235222437919",
     "msvalidate.01": "C5B8CCF063D86850778DB66387A53E61",
+    "p:domain_verify": siteConfig.pinterestVerificationId || "aae03369cfc300d8387c0a8c797ef786",
   },
 };
 
