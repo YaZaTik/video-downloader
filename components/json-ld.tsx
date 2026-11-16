@@ -22,11 +22,21 @@ export function JsonLd() {
     "@type": "Organization",
     name: siteConfig.brandName,
     url: baseUrl,
-    logo: `${baseUrl}/icon.png`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/icon.png`,
+      width: 192,
+      height: 192,
+    },
     sameAs: [
-      "https://x.com/videodownloader",
-      "https://github.com",
+      "https://x.com/saveitvideo",
+      "https://www.pinterest.com/saveitvideo",
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: baseUrl,
+    },
   };
 
   const breadcrumbsSchema = {

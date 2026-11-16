@@ -3,9 +3,9 @@ import { InstagramPageClient } from "./instagram-client";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Téléchargeur Instagram gratuit — Reels, Vidéos & Stories (1080p) | SaveIt",
+  title: "Free Instagram Video Downloader — Reels, Stories & Videos (1080p) | SaveIt",
   description:
-    "Téléchargez gratuitement vos Reels, vidéos et Stories Instagram en haute définition 1080p Full HD et MP3 sans filigrane avec Saveit.video. Compatible PC, Android et iPhone.",
+    "Download Instagram Reels, Stories, and videos in 1080p Full HD MP4 or MP3 audio. Free, no watermark, no registration — works on PC, Android, iPhone. Téléchargeur Instagram gratuit.",
   keywords: [
     "instagram video downloader",
     "instagram downloader",
@@ -63,21 +63,39 @@ export const metadata: Metadata = {
     "baixar vídeos instagram",
   ],
   alternates: {
-    canonical: "/instagram",
+    canonical: "https://saveit.video/instagram",
     languages: {
-      en: "https://saveit.video/instagram",
-      fr: "https://saveit.video/instagram",
-      ar: "https://saveit.video/instagram",
+      "en": "https://saveit.video/instagram",
+      "fr": "https://saveit.video/instagram",
+      "ar": "https://saveit.video/instagram",
+      "x-default": "https://saveit.video/instagram",
     },
   },
   openGraph: {
-    title: "Téléchargeur Instagram gratuit — Reels & Vidéos (1080p) — SaveIt",
+    title: "Free Instagram Video Downloader — Reels & Videos (1080p) — SaveIt",
     description:
-      "Enregistrez facilement vos vidéos, Reels et Stories Instagram en haute résolution sans filigrane et sans inscription.",
+      "Download Instagram Reels, Stories, and videos in Full HD 1080p MP4 or MP3 audio. Free, no watermark, no login required.",
     url: "https://saveit.video/instagram",
     siteName: siteConfig.brandName,
-    locale: "fr_FR",
+    locale: "en_US",
+    alternateLocale: ["fr_FR", "ar_AR"],
     type: "website",
+    images: [
+      {
+        url: "https://saveit.video/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "SaveIt Instagram Video Downloader — Free Reels & Stories Download",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Instagram Video Downloader — Reels & Stories (1080p) | SaveIt",
+    description:
+      "Download Instagram Reels, Stories & videos in 1080p HD — free, no watermark.",
+    images: ["https://saveit.video/twitter-image"],
   },
 };
 

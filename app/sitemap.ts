@@ -2,56 +2,56 @@ import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const today = new Date("2026-11-16");
 
   return [
     {
       url: `${siteConfig.url}/`,
-      lastModified: now,
+      lastModified: today,
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${siteConfig.url}/fr`,
-      lastModified: now,
+      lastModified: today,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${siteConfig.url}/ar`,
-      lastModified: now,
+      lastModified: today,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${siteConfig.url}/instagram`,
-      lastModified: now,
+      lastModified: today,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${siteConfig.url}/x`,
-      lastModified: now,
+      lastModified: today,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
       url: `${siteConfig.url}/tutorial`,
-      lastModified: now,
+      lastModified: new Date("2026-11-10"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${siteConfig.url}/privacy`,
-      lastModified: now,
+      lastModified: new Date("2026-10-01"),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.6,
     },
     {
       url: `${siteConfig.url}/terms`,
-      lastModified: now,
+      lastModified: new Date("2026-10-01"),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.6,
     },
   ];
 }

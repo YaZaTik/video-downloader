@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/",
+    languages: {
+      "en": "https://saveit.video/",
+      "fr": "https://saveit.video/fr",
+      "ar": "https://saveit.video/ar",
+      "x-default": "https://saveit.video/",
+    },
   },
   openGraph: {
     title: siteConfig.title,
@@ -36,13 +42,24 @@ export const metadata: Metadata = {
     url: "/",
     siteName: siteConfig.brandName,
     locale: "en_US",
+    alternateLocale: ["fr_FR", "ar_AR"],
     type: "website",
+    images: [
+      {
+        url: "https://saveit.video/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "SaveIt — Free Video Downloader for X & Instagram",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.shortTitle,
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
+    images: ["https://saveit.video/twitter-image"],
   },
   robots: {
     index: true,

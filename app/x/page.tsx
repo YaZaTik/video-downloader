@@ -3,9 +3,9 @@ import { TwitterPageClient } from "./twitter-client";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Téléchargeur Vidéo X (Twitter) gratuit — Tweets, Clips & GIFs (1080p) | SaveIt",
+  title: "Free X (Twitter) Video Downloader — Tweets, Clips & GIFs (1080p) | SaveIt",
   description:
-    "Téléchargez gratuitement vos vidéos, clips et GIFs de X (Twitter) en Full HD 1080p MP4 et convertissez en audio MP3 sans filigrane. Rapide, sans bots et compatible PC, Android, iPhone.",
+    "Download X (Twitter) videos, clips and GIFs in Full HD 1080p MP4 or convert to MP3 audio. Fast, free, no watermark — compatible with PC, Android, iPhone. Téléchargeur X Twitter gratuit.",
   keywords: [
     "twitter video downloader",
     "x video downloader",
@@ -60,21 +60,39 @@ export const metadata: Metadata = {
     "baixar twitter video",
   ],
   alternates: {
-    canonical: "/x",
+    canonical: "https://saveit.video/x",
     languages: {
-      en: "https://saveit.video/x",
-      fr: "https://saveit.video/x",
-      ar: "https://saveit.video/x",
+      "en": "https://saveit.video/x",
+      "fr": "https://saveit.video/x",
+      "ar": "https://saveit.video/x",
+      "x-default": "https://saveit.video/x",
     },
   },
   openGraph: {
-    title: "Téléchargeur Vidéo X (Twitter) gratuit — Tweets, Clips & GIFs (1080p) — SaveIt",
+    title: "Free X (Twitter) Video Downloader — Tweets, Clips & GIFs (1080p) — SaveIt",
     description:
-      "Enregistrez facilement vos vidéos, clips et GIFs de X (Twitter) en haute résolution 1080p sans filigrane et sans inscription.",
+      "Download X (Twitter) videos, clips and GIFs in 1080p Full HD MP4 or MP3 audio. Free, no watermark, no registration required.",
     url: "https://saveit.video/x",
     siteName: siteConfig.brandName,
-    locale: "fr_FR",
+    locale: "en_US",
+    alternateLocale: ["fr_FR", "ar_AR"],
     type: "website",
+    images: [
+      {
+        url: "https://saveit.video/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "SaveIt X Twitter Video Downloader — Free HD Download",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free X (Twitter) Video Downloader — Tweets, Clips & GIFs (1080p) | SaveIt",
+    description:
+      "Download X (Twitter) videos, clips & GIFs in 1080p HD — free, no watermark.",
+    images: ["https://saveit.video/twitter-image"],
   },
 };
 
