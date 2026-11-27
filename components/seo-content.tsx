@@ -245,6 +245,78 @@ export function SeoContent() {
         </div>
       </section>
 
+      {/* ─── Structured SEO Guide: Download Social Videos with saveit.video ─── */}
+      <section className="rounded-3xl border border-zinc-800/80 bg-zinc-900/30 p-8 sm:p-10 space-y-8">
+        <div className="space-y-3">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Download Social Videos with saveit.video
+          </h1>
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            Welcome to <span className="font-semibold text-white">saveit.video</span>, your fast and reliable online hub to download social videos from Instagram and X (Twitter) in original high definition.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {/* Section 1: Instagram Video Downloader */}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-pink-500"></span>
+              instagram video downloader for quick access
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4 border-l border-zinc-800">
+              <div className="space-y-1.5">
+                <h3 className="text-sm font-semibold text-zinc-200">
+                  How to download an Instagram video
+                </h3>
+                <p className="text-xs text-zinc-400 leading-relaxed">
+                  Open Instagram, copy the share link of any public post or video, paste it into our search bar, and select your preferred MP4 resolution to start the immediate download.
+                </p>
+              </div>
+              <div className="space-y-1.5">
+                <h3 className="text-sm font-semibold text-zinc-200">
+                  Save Instagram Reels with ease
+                </h3>
+                <p className="text-xs text-zinc-400 leading-relaxed">
+                  Easily preserve trending Reels with high-fidelity audio tracks intact. Saveit Video extracts the original media directly without watermarks or quality loss.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 2: X Video Downloader */}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+              x video downloader for videos shared on X
+            </h2>
+            <div className="pl-4 border-l border-zinc-800 space-y-1.5">
+              <h3 className="text-sm font-semibold text-zinc-200">
+                How to download a video from X
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Copy the link of the post containing the video on X, paste it into the downloader box above, and choose from available qualities including 1080p Full HD, 720p, or MP3 audio.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 3: Twitter Video Downloader */}
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+              twitter video downloader for online use
+            </h2>
+            <div className="pl-4 border-l border-zinc-800 space-y-1.5">
+              <h3 className="text-sm font-semibold text-zinc-200">
+                Simple steps for saving a video
+              </h3>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Saveit Video works entirely online in your browser without requiring any third-party apps, browser extensions, or account registrations. Simply copy, paste, and save your video in seconds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Quality & Resolution Matrix ──────────────────────────── */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
