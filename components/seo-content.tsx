@@ -195,6 +195,56 @@ export function SeoContent() {
         </section>
       )}
 
+      {/* ─── Editorial SEO Guide: Download Videos from Instagram and X ─── */}
+      <section className="rounded-3xl border border-zinc-800/80 bg-zinc-900/30 p-8 sm:p-10 space-y-6">
+        <div className="space-y-3">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Download Videos from Instagram and X
+          </h1>
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            Saveit Video makes it easy to download videos from Instagram and X. Use our <b className="font-semibold text-white">instagram video downloader</b> or <b className="font-semibold text-white">x video downloader</b> to save content you are permitted to download for personal reference or offline viewing.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-2">
+            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+              Simple Online Video Downloads
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Copy the link to a video, open Saveit Video, and follow the on-page instructions. The service is designed to make saving supported videos straightforward, without unnecessary steps.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-2">
+            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+              Instagram Video Downloader
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Use the <b className="font-semibold text-white">instagram video downloader</b> to save supported Instagram videos. Looking for an <b className="font-semibold text-white">instagram reels downloader</b>? Saveit Video can help with supported Reels as well.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-2">
+            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+              X and Twitter Video Downloader
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Save supported posts with the <b className="font-semibold text-white">x video downloader</b>. The tool also serves as a <b className="font-semibold text-white">twitter video downloader</b> for users searching by X’s former name. This <b className="font-semibold text-white">twitter video downloader online</b> option offers a convenient way to access supported video downloads.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/50 p-6 space-y-2">
+            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+              Use Content Responsibly
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              Only download videos when you have permission or the right to do so. Respect creators’ rights and the applicable platform terms. Saveit Video is an independent service and is not affiliated with Instagram or X.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ─── Quality & Resolution Matrix ──────────────────────────── */}
       <section className="space-y-6">
         <div className="text-center space-y-2">
